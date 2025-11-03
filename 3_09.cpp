@@ -16,9 +16,6 @@
 
 // [1]
 class IPv4 {
-  private:
-    // [2]
-    std::uint8_t components[4];
 
   public:
     IPv4() : components{0, 0, 0, 0} {
@@ -76,6 +73,10 @@ class IPv4 {
 
     friend std::istream &operator>>(std::istream &is, IPv4 &ip);       // [5]
     friend std::ostream &operator<<(std::ostream &os, const IPv4 &ip); // [6]
+
+  private:
+    // [2]
+    std::uint8_t components[4];
 };
 
 // [4]
